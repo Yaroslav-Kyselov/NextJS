@@ -1,24 +1,24 @@
-import {FC} from "react";
-import {Metadata} from "next";
+import Link from "next/link";
 
-type Props={
-    params:{id:string}
+interface Params {
+    params: { id: string }
 }
 
-export const generateMetadata=async({params}:Props):Promise<Metadata> => {
-const {id} = await params;
-    return {
-        title: "User Page title"+ id,
-    }
-
+async function getUser(id: string) {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    return res.json()
 }
-const UserPage:FC<Props> = async ({params}) => {
-    const {id} = await params;
+
+export default async function UserPage({ params }: Params) {
+    const user = await getUser(params.id)
+
     return (
         <div>
-            User Page content {id}
+            <h1>{user.name}</h1>
+            <p><b>Email:</b> {user.email}</p>
+            <p><b>Телефон:</b> {user.phone}</p>
+            <p><b>Сайт:</b> {user.website}</p>
+            <Link href="/users">← Назад</Link>
         </div>
     )
 }
-
-export default UserPage;

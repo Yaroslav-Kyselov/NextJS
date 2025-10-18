@@ -13,10 +13,9 @@ const PostsLayout = ({children}: Props) => {
 
     return (
         <div>
-            <hr/>
-            About layout
+
             {children}
-            <hr/>
+            
         </div>
     );
 }

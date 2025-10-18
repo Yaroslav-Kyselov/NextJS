@@ -9,15 +9,15 @@ export const Menu = () => {
                 </li>
 
                 <li>
-                    <Link href="/about">Comments</Link>
+                    <Link href="/comments">Comments</Link>
                 </li>
 
                 <li>
-                    <Link href="/contacts">Posts</Link>
+                    <Link href="/posts">Posts</Link>
                 </li>
 
                 <li>
-                    <Link href="/users">users</Link>
+                    <Link href="/users">Users</Link>
                 </li>
 
             </ul>
