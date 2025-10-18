@@ -18,19 +18,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+FE. NextJS. ДЗ 1
+Створити структуру сторінок для відображення користувачів, постів, коментарів з джейсонплейсхолдеру.
 
-To learn more about Next.js, take a look at the following resources:
+/users – відобразити список юзерів з активною лінкою
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/posts – відобразити список постів з активною лінкою
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/comments – відобразити список коментарів з активною лінкою
 
-## Deploy on Vercel
+/users/id – відобразити певного юзера
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+/posts/id – відобразити певний пост
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+/comments/id – відобразити певний коментар

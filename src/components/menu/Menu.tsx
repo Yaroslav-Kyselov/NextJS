@@ -9,11 +9,11 @@ export const Menu = () => {
                 </li>
 
                 <li>
-                    <Link href="/about">about</Link>
+                    <Link href="/about">Comments</Link>
                 </li>
 
                 <li>
-                    <Link href="/contacts">contacts</Link>
+                    <Link href="/contacts">Posts</Link>
                 </li>
 
                 <li>
