@@ -1,9 +1,9 @@
-import {UsersComponents} from "@/components/users/UsersComponents";
+import {UsersComponent} from "@/components/users/UsersComponent";
 
 const UserPage = () => {
     return (
         <div>
-            <UsersComponents/>
+            <UsersComponent/>
         </div>
     )
 }
