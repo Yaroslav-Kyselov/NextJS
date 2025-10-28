@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface Params {
-    params: { id: string }
+    params:Promise< { id: string }>
 }
 
 async function getCar(id: string) {
@@ -10,7 +10,8 @@ async function getCar(id: string) {
 }
 
 export default async function CarPage({ params }: Params) {
-    const car = await getCar(params.id)
+    const {id}=await params;
+    const car = await getCar(id)
 
     return (
         <div>
