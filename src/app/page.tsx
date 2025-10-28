@@ -1,16 +1,22 @@
 import Form from "next/form";
-import {saveMeal} from "@/server-actions/serverActions";
+import {getMeals, saveMeal} from "@/server-actions/serverActions";
 
-export default function Home() {
+export default async function Home() {
+
+    const mealsArray = await getMeals();
+
     return (
         <div>
-           <Form action={saveMeal} >
-               <input type={"text"} name={"title"}/>
+            <Form action={saveMeal}>
+                <input type={"text"} name={"title"}/>
                 <button>send</button>
+            </Form>
+            <div className={'meals-list'}>
+                {mealsArray.map(meal => (
+                    <div key={meal.id}>{meal.id} {meal.title}</div>
+                ))}
 
-
-           </Form>
-
+            </div>
         </div>
-);
+    );
 }
