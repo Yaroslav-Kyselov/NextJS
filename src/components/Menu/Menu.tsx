@@ -12,6 +12,10 @@ export const Menu = () => {
                     <Link href="/cars">Перелік машин</Link>
                 </li>
 
+                <li>
+                    <Link href="/cars/new">Додати машину</Link>
+                </li>
+
             </ul>
             <hr/>
         </div>
