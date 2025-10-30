@@ -13,7 +13,7 @@ export async function createCar(formData: FormData) {
         throw new Error('Invalid input');
     }
 
-    await carService.create({ brand, price, year });
+    await carService.createOneCar({ brand, price, year });
 
     redirect('/cars');
 }
