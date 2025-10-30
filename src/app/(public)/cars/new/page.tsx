@@ -1,10 +1,10 @@
 import Form from "next/form";
-import {saveAction} from "@/server-actions/serverActions";
+import {createCar} from "@/server-actions/serverActions";
 
 const CreateCarPage = () => {
     return (
         <div>
-            <Form action={saveAction}>
+            <Form action={createCar}>
                 <input type="text" name="brend" placeholder={'model'}/>
                 <input type="number" name="price" placeholder={'price'}/>
                 <input type="number" name="year" placeholder={'year'}/>
