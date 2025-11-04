@@ -5,7 +5,7 @@ const CreateCarPage = () => {
     return (
         <div>
             <Form action={createCar}>
-                <input type="text" name="brend" placeholder={'model'}/>
+                <input type="text" name="brand" placeholder={'model'}/>
                 <input type="number" name="price" placeholder={'price'}/>
                 <input type="number" name="year" placeholder={'year'}/>
                 <button type="submit">Create Car</button>
