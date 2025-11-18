@@ -2,18 +2,15 @@
 
 import { redirect } from 'next/navigation';
 import {carService} from "@/services/api.service";
+import {ICar} from "@/models/ICar";
 
 
-export async function createCar(formData: FormData) {
-    const brand = formData.get('brand') as string;
-    const price = Number(formData.get('price'));
-    const year = Number(formData.get('year'));
-
-    if (!brand || !price || !year) {
-        throw new Error('Invalid input');
-    }
-
-    await carService.createOneCar({ brand, price, year });
+export async function createCar(data: ICar) {
+    await carService.createOneCar({
+        brand: data.brand,
+        price: data.price,
+        year: data.year,
+    });
 
     redirect('/cars');
 }
