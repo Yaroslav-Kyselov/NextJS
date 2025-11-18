@@ -1,11 +1,12 @@
 import Link from "next/link";
+import {API_URL} from "@/services/api.service";
 
 interface Params {
     params:Promise< { id: string }>
 }
 
 async function getCar(id: string) {
-    const res = await fetch(`http://owu.linkpc.net/carsAPI/v1/cars/${id}`)
+    const res = await fetch(`${API_URL}/cars/${id}`)
     return res.json()
 }
 

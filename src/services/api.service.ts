@@ -1,5 +1,5 @@
 import {ICar} from "@/models/ICar";
-const API_URL = 'http://owu.linkpc.net/carsAPI/v1';
+export const API_URL = 'http://185.69.152.209/carsAPI/v1';
 
 export const carService = {
     async getAllCars(): Promise<ICar[]> {
